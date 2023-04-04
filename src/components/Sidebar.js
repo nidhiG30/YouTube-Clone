@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [active, setActive] = useState('Home');
 
   return (
-    <div className="yt-scrollbar w-60 bg-yt-black h-[calc(100vh-53px)] mt-14 fixed top-0 left-0 text-yt-white p-3 overflow-scroll">
+    <div className="yt-scrollbar scrollbar-hide w-60 bg-yt-black h-[calc(100vh-53px)] mt-14 fixed top-0 left-0 text-yt-white p-3 overflow-scroll">
       <div className="mb-4">
         {SideBarItems.Top.map((item, index) => {
           return (
