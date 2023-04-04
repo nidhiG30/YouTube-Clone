@@ -13,14 +13,14 @@ const Navbar = () => {
         <div className="text-yt-white p-2 w-10 text-2xl text-center hover:bg-yt-light-black rounded-full cursor-pointer">
           <HiOutlineBars3 />
         </div>
-        <div className="py-5 w-24 pr-3">
+        <div className="py-5 w-28 pr-3">
           <Link to="/">
             <img src={logo} alt="" className="object-contain" />
           </Link>
         </div>
       </div>
 
-      <div className="h-10 flex flex-row items-center flex-1">
+      <div className="h-10 flex flex-row items-center">
         <div className="w-[593px] bg-yt-black flex border border-yt-light-black items-center rounded-3xl h-10">
           <input
             type="text"
@@ -44,6 +44,12 @@ const Navbar = () => {
         <div className="flex flex-row items-center">
           <div className="mr-2 p-2 w-10 hover:bg-yt-light-black rounded-full cursor-pointer">
             <BiVideoPlus size={25} className="text-yt-white text-center" />
+          </div>
+          <div className='mx-3 p-2.5 w-10 hover:bg-yt-light-black rounded-full cursor-pointer'>
+            <FaRegBell size={20} className='text-center text-yt-white' />
+          </div>
+          <div className='mx-3 items-center cursor-pointer'>
+            <button className='bg-yt-red py-1 px-4 text-yt-white rounded-md'>Sign In</button>
           </div>
         </div>
       </div>
