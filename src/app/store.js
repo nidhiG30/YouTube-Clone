@@ -1,5 +1,5 @@
-import { combineReducers, configureStore } from '@redux/toolkit';
-import userReducer from '../slices/userSlices';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import userReducer from '../slices/userSlice';
 
 const reducer = combineReducers({
   userInfo: userReducer,
@@ -7,7 +7,6 @@ const reducer = combineReducers({
 
 export const store = configureStore({
   reducer,
-  middleware: getDefaultMiddleware => {
-    getDefaultMiddleware({ serializableCheck: false });
-  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({ serializableCheck: false })
 });
