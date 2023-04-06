@@ -5,8 +5,15 @@ import { BiVideoPlus } from 'react-icons/bi'; // BoxIcons
 import { FaRegBell } from 'react-icons/fa'; // Font Awesome 5
 import logo from '../assets/yt-logo-white.png';
 import { Link } from 'react-router-dom';
+import { signInWithPopup } from 'firebase/auth';
+import { auth, provider } from '../firebase';
 
 const Navbar = () => {
+  const handleLogin = async () => {
+    const response = await signInWithPopup(auth, provider);
+    console.log(response);
+  };
+
   return (
     <div className="bg-yt-black h-14 flex items-center pl-4 pr-5 justify-between fixed w-full z-10">
       <div className="flex justify-between items-center">
@@ -45,11 +52,16 @@ const Navbar = () => {
           <div className="mr-2 p-2 w-10 hover:bg-yt-light-black rounded-full cursor-pointer">
             <BiVideoPlus size={25} className="text-yt-white text-center" />
           </div>
-          <div className='mx-3 p-2.5 w-10 hover:bg-yt-light-black rounded-full cursor-pointer'>
-            <FaRegBell size={20} className='text-center text-yt-white' />
+          <div className="mx-3 p-2.5 w-10 hover:bg-yt-light-black rounded-full cursor-pointer">
+            <FaRegBell size={20} className="text-center text-yt-white" />
           </div>
-          <div className='mx-3 items-center cursor-pointer'>
-            <button className='bg-yt-red py-1 px-4 text-yt-white rounded-md'>Sign In</button>
+          <div className="mx-3 items-center cursor-pointer">
+            <button
+              className="bg-yt-red py-1 px-4 text-yt-white rounded-md"
+              onClick={handleLogin}
+            >
+              Sign In
+            </button>
           </div>
         </div>
       </div>
