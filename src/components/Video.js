@@ -36,7 +36,7 @@ const Video = ({
             </span>
           </h3>
           <p className="text-yt-gray m-0 font-medium text-xs">
-            {views} Views . {uploadTime}
+            {views} Views • {uploadTime}
           </p>
         </div>
       </div>
