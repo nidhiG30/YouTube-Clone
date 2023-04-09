@@ -4,7 +4,7 @@ import { CategoryItems } from '../static/data';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { auth, db } from '../firebase';
 import { Link } from 'react-router-dom';
-import Video from '../components/Video';
+import VideoCard from '../components/VideoCard';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../slices/userSlice';
@@ -59,7 +59,7 @@ const Home = () => {
             ) : (
               videos.map((video, i) => (
                 <Link to={`/video/${video.id}`} key={video.id}>
-                  <Video {...video}/>
+                  <VideoCard {...video}/>
                 </Link>
               ))
             )

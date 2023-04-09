@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdVerified } from 'react-icons/md';
 
-const Video = ({
+const VideoCard = ({
   thumbnail,
   duration,
   title,
@@ -44,4 +44,4 @@ const Video = ({
   );
 };
 
-export default Video;
+export default VideoCard;

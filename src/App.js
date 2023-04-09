@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Video from './pages/Video';
+import VideoPage from './pages/VideoPage';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/video/:id" element={<Video />} />
+          <Route path="/video/:id" element={<VideoPage />} />
         </Routes>
       </BrowserRouter>
     </>

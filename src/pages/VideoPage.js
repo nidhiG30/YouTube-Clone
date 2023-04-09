@@ -14,7 +14,7 @@ import Comment from '../components/Comment';
 import { CategoryItems } from '../static/data';
 import RecommendVideo from '../components/RecommendVideo';
 
-const Video = () => {
+const VideoPage = () => {
   const [videos, setVideos] = useState([]);
   const [comments, setComments] = useState([]);
   const [data, setData] = useState(null);
@@ -246,4 +246,4 @@ const Video = () => {
   );
 };
 
-export default Video;
+export default VideoPage;
